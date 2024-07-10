@@ -33,7 +33,6 @@ def unauthorized() -> str:
       - raises a 401 error by using abort
     """
     abort(401)
-<<<<<<< HEAD
 
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
@@ -42,5 +41,3 @@ def forbidden() -> str:
       - raises a 403 error by using abort
     """
     abort(403)
-=======
->>>>>>> 5087d207ada2ef01c2057595931f4197641f5ae0
