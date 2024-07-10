@@ -9,7 +9,6 @@ from flask_cors import (CORS, cross_origin)
 import os
 
 
-
 app = Flask(__name__)
 app.register_blueprint(app_views)
 CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
@@ -21,6 +20,7 @@ def not_found(error) -> str:
     """
     return jsonify({"error": "Not found"}), 404
 
+
 @app.errorhandler(401)
 def unauthorized(error):
     """ Unauthorized handler """
@@ -31,7 +31,6 @@ def forbidden_error(error) -> str:
     """ Forbidden handler
     """
     return jsonify({"error": "Forbidden"}), 403
-
 
 
 if __name__ == "__main__":
